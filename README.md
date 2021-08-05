@@ -1,4 +1,4 @@
-# FiveM-Queue
+# FiveM-Queue 
 
 ## How to install
 ---
@@ -52,3 +52,16 @@ Will return whether or not the queue's exports are ready to be called.
 ```Lua
 print(Queue.IsReady())
 ```
+## Other Queue Functions
+You can call every queue function within sh_queue.lua.
+```Lua
+local ids = Queue.Exports:GetIds(src)
+
+-- sets the player to position 1 in queue
+Queue.Exports:SetPos(ids, 1)
+-- returns whether or not the player has any priority
+Queue.Exports:IsPriority(ids)
+--- returns size of queue
+Queue.Exports:GetSize()
+
+Simple Tweaks by Luv Arora
